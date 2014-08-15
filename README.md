@@ -41,6 +41,15 @@ var balance = require('crypto-balance');
 balance("DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo", function(error, assets) {
   console.log(assets);
 });
+
+// [ { address: 'DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo',
+//    balance: 100000000,
+//    token: 'XDP/DOGEPARTY' },
+//  { address: 'DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo',
+//    balance: 500000000000,
+//    token: 'XDP/DOLLARS' },
+//  ...
+// ]
 ```
 
 

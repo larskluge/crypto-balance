@@ -28,10 +28,12 @@ Warning: this is a very early version--use at your own risk. Pull requests are v
 
 ```
 ~ » npm install -g crypto-balance # for global installation of _balance_
-~ » balance 1sbeSvsvU8GVZsVZopY7hB8DimDxfDArQ
-0.00458889 BTC
+~ » balance DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr                                                                      ~
+1,009,968,741.03499746 DOGE
+~ » balance 1LARSvRshS9Nm3D3aWLELQjNYtaBrWGzg2                                                                      ~
+0.00010860 BTC
+42.00000000 XCP/LARS
 ```
-
 
 
 ### Node.js

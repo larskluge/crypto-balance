@@ -13,6 +13,9 @@ unless addr
   process.exit 1
 
 balance addr, (error, assets) ->
-  for asset in assets
-    console.log "#{numeral(asset.balance).format("0,0.00000000")} #{asset.token}"
+  if error
+    console.log error
+  else
+    for asset in assets
+      console.log "#{numeral(asset.balance).format("0,0.00000000")} #{asset.token}"
 

@@ -27,7 +27,11 @@ dogeparty = (addr) ->
                 value: addr
       )
         .spread (resp, json) ->
-          json.result
+          if e = json.error
+            throw new Error("#{e.message} (#{e.code}): #{JSON.stringify(e.data)}")
+            []
+          else
+            json.result
         .map (item) ->
           {address: item.address, balance: item.quantity, token: "#{token}/#{item.asset}"}
     .reduce (item, merged) ->

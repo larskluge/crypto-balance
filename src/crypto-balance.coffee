@@ -1,5 +1,5 @@
 Promise = require("bluebird")
-services = require('./lib').services
+services = require('./services')
 
 
 balance = (addr, callback) ->

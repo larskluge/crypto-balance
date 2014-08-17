@@ -1,21 +1,22 @@
 {
   "name": "crypto-balance",
   "description": "Query various crypto tokens for their address balances",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Lars Kluge <l@larskluge.com>",
-  "main": "crypto-balance.coffee",
+  "main": "lib/crypto-balance.js",
   "bin": {
-    "balance": "bin/balance.coffee"
-  },
-  "dependencies": {
-    "coffee-script": "^1.7.1",
-    "request": "^2.40.0",
-    "bluebird": "^2.3.0",
-    "numeral": "^1.5.3"
+    "balance": "bin/balance.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/larskluge/crypto-balance"
+  },
+  "dependencies": {
+    "request": "^2.40.0",
+    "bluebird": "^2.3.0",
+    "numeral": "^1.5.3"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.7.1"
   }
 }
-

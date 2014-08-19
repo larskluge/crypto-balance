@@ -55,6 +55,20 @@ balance("DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo", function(error, assets) {
 ```
 
 
+### Promise
+
+```
+var balance = require("crypto-balance");
+balance("DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr").then(function(balances) {
+  console.log(balances);
+});
+
+// [ { address: 'DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr',
+//  balance: '1399253366.95050883',
+//  token: 'DOGE' } ]
+```
+
+
 ## License
 
 [MIT](https://github.com/larskluge/crypto-balance/blob/master/LICENSE)

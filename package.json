@@ -1,6 +1,7 @@
 {
   "name": "crypto-balance",
   "description": "Query various crypto tokens for their address balances",
+  "keywords": ["crypto", "balance", "money", "currency", "bitcoin", "btc", "litecoin", "ltc", "dogecoin", "doge", "counterparty", "xcp", "dogeparty", "xdp"],
   "version": "0.0.2",
   "author": "Lars Kluge <l@larskluge.com>",
   "main": "lib/crypto-balance.js",

@@ -25,6 +25,9 @@ party = (addr, services) ->
           address: item.address
           balance: item.normalized_quantity
           token: tokenName
+        .catch (error) ->
+          # Something bad happened. Skipping that one (url)…
+          []
     .reduce (item, merged) ->
       merged.concat item
     , []

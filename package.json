@@ -1,7 +1,22 @@
 {
   "name": "crypto-balance",
   "description": "Query various crypto tokens for their address balances",
-  "keywords": ["crypto", "balance", "money", "currency", "bitcoin", "btc", "litecoin", "ltc", "dogecoin", "doge", "counterparty", "xcp", "dogeparty", "xdp"],
+  "keywords": [
+    "crypto",
+    "balance",
+    "money",
+    "currency",
+    "bitcoin",
+    "btc",
+    "litecoin",
+    "ltc",
+    "dogecoin",
+    "doge",
+    "counterparty",
+    "xcp",
+    "dogeparty",
+    "xdp"
+  ],
   "version": "0.0.2",
   "author": "Lars Kluge <l@larskluge.com>",
   "main": "lib/crypto-balance.js",
@@ -15,7 +30,8 @@
   "dependencies": {
     "request": "^2.40.0",
     "bluebird": "^2.3.0",
-    "numeral": "^1.5.3"
+    "numeral": "^1.5.3",
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
     "coffee-script": "^1.7.1"

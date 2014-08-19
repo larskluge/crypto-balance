@@ -17,7 +17,7 @@
     "dogeparty",
     "xdp"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Lars Kluge <l@larskluge.com>",
   "main": "lib/crypto-balance.js",
   "bin": {

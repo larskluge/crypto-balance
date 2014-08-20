@@ -10,8 +10,6 @@ balance = (addr, callback) ->
     , []
     .filter (asset) ->
       asset.address == addr
-    .then (assets) ->
-      assets
     .nodeify callback
 
 

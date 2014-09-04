@@ -71,8 +71,6 @@ balance("DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr").then(function(balances) {
 
 ## Tests
 
-You'll need [mocha](http://visionmedia.github.io/mocha/#installation) installed on your system. Run tests with:
-
 ```
 npm test
 ```

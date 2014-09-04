@@ -24,7 +24,7 @@
     "balance": "bin/balance.js"
   },
   "scripts": {
-    "test": "mocha test --compilers=coffee:coffee-script/register --recursive"
+    "test": "./node_modules/mocha/bin/mocha test --compilers=coffee:coffee-script/register --recursive"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
   "devDependencies": {
     "coffee-script": "^1.7.1",
     "chai": "^1.9.1",
-    "replay": "^1.10.3"
+    "replay": "^1.10.3",
+    "mocha": "^1.21.4"
   }
 }

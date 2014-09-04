@@ -36,5 +36,5 @@ party = (addr, services) ->
     , []
 
 
-module.exports.party = party
+exports.party = party
 

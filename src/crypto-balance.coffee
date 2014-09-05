@@ -9,7 +9,7 @@ balance = (addr, callback) ->
       a.concat b
     , []
     .filter (asset) ->
-      asset.address == addr
+      !asset.address or asset.address == addr
     .nodeify callback
 
 

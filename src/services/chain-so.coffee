@@ -1,5 +1,6 @@
 Promise = require("bluebird")
 req = Promise.promisifyAll(require("request"))
+_ = require("underscore")
 
 
 chain_so = (addr) ->
@@ -9,12 +10,27 @@ chain_so = (addr) ->
       url = "https://chain.so/api/v2/get_address_balance/#{network}/#{addr}"
       req.getAsync(url)
         .spread (resp, body) ->
-          JSON.parse(body)
-    .filter (res) ->
-      res.status == 'success'
+          json = JSON.parse(body)
+          _(json.data).extend service: url
+          json
     .map (res) ->
       data = res.data
-      {address: data.address, balance: data.confirmed_balance, token: data.network}
+      item = success: res.status == 'success'
+      if item.success
+        item.status = 'success'
+        item.address = data.address
+        item.quantity = data.confirmed_balance
+        item.asset = data.network
+      else
+        if data?.address == 'A valid address is required'
+          return # all good, this blockchain has another address format than requested
+        else
+          item.status = 'warning'
+          item.service = data.service
+          item.message = 'TODO'
+          item.raw = res
+      item
+    .filter (item) -> !!item
 
 
 module.exports = chain_so

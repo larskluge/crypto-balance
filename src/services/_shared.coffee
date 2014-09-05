@@ -19,18 +19,12 @@ party = (addr, services) ->
       [token, url] = attrs
       req.postAsync(params url, addr)
         .spread (resp, json) ->
-          if resp.statusCode isnt 200
-            throw new Error json.message
+          if resp.statusCode in [200..299] and !json.error
+            _(json.result).map (item) ->
+              tokenName = _([token, item.asset]).uniq().join('/')
+              status: 'success', address: item.address, balance: item.normalized_quantity, token: tokenName
           else
-            json.result
-        .map (item) ->
-          tokenName = _([token, item.asset]).uniq().join('/')
-          address: item.address
-          balance: item.normalized_quantity
-          token: tokenName
-        .catch (error) ->
-          console.error "Something bad happened: #{error.message} (#{token}@#{url})"
-          []
+            [status: 'error', service: url, message: resp.body, raw: resp]
     .reduce (item, merged) ->
       merged.concat item
     , []

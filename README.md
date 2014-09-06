@@ -45,11 +45,11 @@ balance("DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo", function(error, assets) {
 });
 
 // [ { address: 'DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo',
-//    balance: 100000000,
-//    token: 'XDP/DOGEPARTY' },
+//    quantity: 100000000,
+//    asset: 'XDP/DOGEPARTY' },
 //  { address: 'DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo',
-//    balance: 500000000000,
-//    token: 'XDP/DOLLARS' },
+//    quantity: 500000000000,
+//    asset: 'XDP/DOLLARS' },
 //  ...
 // ]
 ```
@@ -64,8 +64,8 @@ balance("DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr").then(function(balances) {
 });
 
 // [ { address: 'DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr',
-//  balance: '1399253366.95050883',
-//  token: 'DOGE' } ]
+//  quantity: '1399253366.95050883',
+//  asset: 'DOGE' } ]
 ```
 
 

@@ -24,7 +24,18 @@ describe "Balance", ->
       expect(result).to.not.be.empty
       dp = _.find(result, (item) -> item.asset == "XDP/DOGEPARTY")
       expect(dp).to.exist
-      debugger
       expect(dp.quantity).to.be.eq "1.00000000"
+      done()
+
+  it "handles failing requests to one service correctly", (done) ->
+    balance("DDAa254Jf99rLzmGe4wA3Shr7MaYBHDd1b").then (result) ->
+      expect(result).to.have.length(2)
+      success = _.find(result, (item) -> item.status == "success")
+      expect(success).to.exist
+
+      error = _.find(result, (item) -> item.status == "error")
+      expect(error).to.exist
+      expect(error.service).to.be.eq "https://wallet.dogeparty.io/_api"
+      expect(error.message).to.be.eq "Server error. Got call_jsonrpc_api request error: [Errno 111] Connection refused"
       done()
 

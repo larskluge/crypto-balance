@@ -24,7 +24,10 @@ party = (addr, services) ->
               tokenName = _([token, item.asset]).uniq().join('/')
               status: 'success', address: item.address, quantity: item.normalized_quantity.toFixed(8), asset: tokenName
           else
-            [status: 'error', service: url, message: resp.body, raw: resp]
+            error = json.error
+            message = error.message
+            message += ". #{error.data.message}" if error.data?.message
+            [status: 'error', service: url, message: message, raw: resp]
     .reduce (item, merged) ->
       merged.concat item
     , []

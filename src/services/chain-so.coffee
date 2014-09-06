@@ -24,7 +24,7 @@ chain_so = (addr) ->
         if data?.address == 'A valid address is required'
           return # all good, this blockchain has another address format than requested
         else
-          status: 'warning'
+          status: 'error'
           service: data.service
           message: 'TODO'
           raw: res

@@ -1,0 +1,18 @@
+POST /_t_api
+host: testnet.wallet.dogeparty.io
+accept: application/json
+content-type: application/json
+body: {\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"get_normalized_balances\",\"params\":{\"addresses\":[\"DDAa254Jf99rLzmGe4wA3Shr7MaYBHDd1b\"]}}
+
+200 HTTP/1.1
+server: nginx
+date: Sat, 06 Sep 2014 14:43:17 GMT
+content-type: application/json
+content-length: 41
+connection: keep-alive
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+x-cw-backendhost: 49e030f1d83a
+
+{"jsonrpc": "2.0", "result": [], "id": 0}

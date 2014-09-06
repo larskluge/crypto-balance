@@ -15,21 +15,19 @@ chain_so = (addr) ->
           json
     .map (res) ->
       data = res.data
-      item = success: res.status == 'success'
-      if item.success
-        item.status = 'success'
-        item.address = data.address
-        item.quantity = data.confirmed_balance
-        item.asset = data.network
+      if res.status == 'success'
+        status: 'success'
+        address: data.address
+        quantity: data.confirmed_balance
+        asset: data.network
       else
         if data?.address == 'A valid address is required'
           return # all good, this blockchain has another address format than requested
         else
-          item.status = 'warning'
-          item.service = data.service
-          item.message = 'TODO'
-          item.raw = res
-      item
+          status: 'warning'
+          service: data.service
+          message: 'TODO'
+          raw: res
     .filter (item) -> !!item
 
 

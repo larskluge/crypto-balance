@@ -1,0 +1,19 @@
+POST /_api
+host: wallet.dogeparty.io
+accept: application/json
+content-type: application/json
+body: {\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"get_normalized_balances\",\"params\":{\"addresses\":[\"DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo\"]}}
+
+200 HTTP/1.1
+server: nginx
+date: Fri, 05 Sep 2014 11:01:10 GMT
+content-type: application/json
+content-length: 2896
+connection: keep-alive
+vary: Accept-Encoding
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+x-cw-backendhost: 49e030f1d83a
+
+{"jsonrpc": "2.0", "result": [{"owner": true, "quantity": 10000000000, "asset": "BLOWJOB", "normalized_quantity": 100.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 100000000000000, "asset": "CRYBABYCOIN", "normalized_quantity": 1000000.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 100000000, "asset": "DOGEPARTY", "normalized_quantity": 1.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 500000000, "asset": "DOGTREATS", "normalized_quantity": 5.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 500000000000, "asset": "DOLLARS", "normalized_quantity": 5000.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 1200000000, "asset": "DOUGH", "normalized_quantity": 12.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 900000, "asset": "EMPTYPRAISE", "normalized_quantity": 900000, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 442, "asset": "GIVETAKEDOGE", "normalized_quantity": 442, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 1000, "asset": "HELLO", "normalized_quantity": 1000, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 100000000, "asset": "HIGHFIVE", "normalized_quantity": 1.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 299877750000, "asset": "HOTDOG", "normalized_quantity": 2998.7775, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 100000000, "asset": "JEDI", "normalized_quantity": 1.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 200000000, "asset": "LITTLESHIBE", "normalized_quantity": 2.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 100000000000000, "asset": "MEGACLAMS", "normalized_quantity": 1000000.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 599755500000000, "asset": "MUCH", "normalized_quantity": 5997555.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 3276800000000, "asset": "RABBIT", "normalized_quantity": 32768.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 555555500000000, "asset": "REDDIT", "normalized_quantity": 5555555.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 100000000, "asset": "SATOSHI", "normalized_quantity": 1.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 17197066000000, "asset": "SIDEHUG", "normalized_quantity": 171970.66, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}, {"owner": false, "quantity": 100000000000, "asset": "TURBOBUCKS", "normalized_quantity": 1000.0, "address": "DCt8sxHX634ghqdDhWFtCPQUyZ3TEfLBCo"}], "id": 0}

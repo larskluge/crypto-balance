@@ -22,7 +22,7 @@ party = (addr, services) ->
           if resp.statusCode in [200..299] and !json.error
             _(json.result).map (item) ->
               tokenName = _([token, item.asset]).uniq().join('/')
-              status: 'success', address: item.address, balance: item.normalized_quantity, token: tokenName
+              status: 'success', address: item.address, quantity: item.normalized_quantity.toFixed(8), asset: tokenName
           else
             [status: 'error', service: url, message: resp.body, raw: resp]
     .reduce (item, merged) ->

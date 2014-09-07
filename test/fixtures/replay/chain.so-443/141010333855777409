@@ -1,0 +1,31 @@
+GET /api/v2/get_address_balance/DOGE/14wCap1sr7zvhDJQmoUoc1tvnLerFT2Jvi
+host: chain.so
+
+404 HTTP/1.1
+server: nginx
+date: Sun, 07 Sep 2014 15:22:18 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+status: 404 Not Found
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-ua-compatible: chrome=1
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: Fri, 01 Jan 1990 00:00:00 GMT
+access-control-allow-origin: *
+access-control-allow-methods: GET,POST
+access-control-allow-headers: Origin,Accept,Content-Type,X-Requested-With,X-CSRF-Token
+set-cookie: request_method=GET; path=/
+x-request-id: 5a9f62ac-d28a-4821-9d53-a1130c2168ab
+x-runtime: 0.020388
+
+{
+  "status": "fail",
+  "data": {
+    "network": "Network is required (DOGE, DOGETEST, ...)",
+    "address": "A valid address is required",
+    "confirmations": "Minimum number of confirmations (optional)"
+  }
+}

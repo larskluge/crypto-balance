@@ -21,7 +21,7 @@ party = (addr, services) ->
         .spread (resp, json) ->
           if resp.statusCode in [200..299] and !json.error
             _(json.result).map (item) ->
-              tokenName = _([token, item.asset]).uniq().join('/')
+              tokenName = "#{token}/#{item.asset}"
               status: 'success', address: item.address, quantity: item.normalized_quantity.toFixed(8), asset: tokenName
           else
             error = json.error

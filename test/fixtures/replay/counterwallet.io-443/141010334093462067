@@ -1,0 +1,18 @@
+POST /_api
+host: counterwallet.io
+accept: application/json
+content-type: application/json
+body: {\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"get_normalized_balances\",\"params\":{\"addresses\":[\"14wCap1sr7zvhDJQmoUoc1tvnLerFT2Jvi\"]}}
+
+200 HTTP/1.1
+server: openresty
+date: Sun, 07 Sep 2014 15:22:21 GMT
+content-type: application/json
+content-length: 321
+connection: keep-alive
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+x-cw-backendhost: cw01.counterwallet.io
+
+{"jsonrpc": "2.0", "result": [{"owner": false, "address": "14wCap1sr7zvhDJQmoUoc1tvnLerFT2Jvi", "asset": "SJCT", "normalized_quantity": 10.0, "quantity": 1000000000}, {"owner": false, "address": "14wCap1sr7zvhDJQmoUoc1tvnLerFT2Jvi", "asset": "SJCX", "normalized_quantity": 192461.5, "quantity": 19246150000000}], "id": 0}

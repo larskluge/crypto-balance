@@ -1,0 +1,19 @@
+POST /_api
+host: counterwallet.io
+accept: application/json
+content-type: application/json
+body: {\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"get_normalized_balances\",\"params\":{\"addresses\":[\"15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd\"]}}
+
+200 HTTP/1.1
+server: openresty
+date: Sun, 07 Sep 2014 15:36:34 GMT
+content-type: application/json
+content-length: 615
+connection: keep-alive
+vary: Accept-Encoding
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+x-cw-backendhost: cw01.counterwallet.io
+
+{"jsonrpc": "2.0", "result": [{"owner": false, "address": "15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd", "asset": "LENTERACOIN", "normalized_quantity": 25000.0, "quantity": 2500000000000}, {"owner": true, "address": "15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd", "asset": "SJCT", "normalized_quantity": 10200.0, "quantity": 1020000000000}, {"owner": true, "address": "15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd", "asset": "SJCX", "normalized_quantity": 394384720.0, "quantity": 39438471502810000}, {"owner": false, "address": "15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd", "asset": "XCP", "normalized_quantity": 3.0, "quantity": 300000000}], "id": 0}

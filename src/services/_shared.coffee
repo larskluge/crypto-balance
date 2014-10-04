@@ -20,13 +20,15 @@ party = (addr, services) ->
       req.postAsync(params url, addr)
         .spread (resp, json) ->
           if resp.statusCode in [200..299] and !json.error
-            _(json.result).map (item) ->
+            for item in json.result
               tokenName = "#{token}/#{item.asset}"
               status: 'success', address: item.address, quantity: item.normalized_quantity.toFixed(8), asset: tokenName
           else
-            error = json.error
-            message = error.message
-            message += ". #{error.data.message}" if error.data?.message
+            if error = json.error
+              message = "#{error.message}. Code: #{error.code}."
+              message += " #{error.data.message}" if error.data?.message
+            else
+              message = "#{json.message}. Code: #{json.code}. #{json.data}"
             [status: 'error', service: url, message: message, raw: resp]
     .reduce (item, merged) ->
       merged.concat item

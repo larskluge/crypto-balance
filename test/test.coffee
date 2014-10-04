@@ -36,6 +36,15 @@ describe "Balance", ->
       error = _.find(result, (item) -> item.status == "error")
       expect(error).to.exist
       expect(error.service).to.be.eq "https://wallet.dogeparty.io/_api"
-      expect(error.message).to.be.eq "Server error. Got call_jsonrpc_api request error: [Errno 111] Connection refused"
+      expect(error.message).to.be.eq "Server error. Code: -32000. Got call_jsonrpc_api request error: [Errno 111] Connection refused"
+      done()
+
+  it "handles counterparty testnet failure", (done) ->
+    balance("13Dk4GmTdYfEjouL1x25PE5ztCMoVv6ipv").then (result) ->
+      expect(result).to.have.length(2)
+      error = _.find(result, (item) -> item.status == "error")
+      expect(error).to.exist
+      expect(error.service).to.be.eq "https://counterwallet.io/_t_api"
+      expect(error.message).to.be.eq "Server error. Code: -32000. Server is not caught up. Please try again later."
       done()
 

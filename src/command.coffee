@@ -11,9 +11,10 @@ module.exports.run = ->
 
   balance addr, (error, items) ->
     if error
-      console.log error
+      console.error error
       process.exit 1
     else
       for item in items
-        console.log "#{numeral(item.quantity).format("0,0.00000000")} #{item.asset}"
+        if item.status == 'success'
+          console.log "#{numeral(item.quantity).format("0,0.00000000")} #{item.asset}"
 

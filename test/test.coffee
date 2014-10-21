@@ -27,6 +27,20 @@ describe "Balance", ->
       expect(dp.quantity).to.be.eq "1.00000000"
       done()
 
+  it "has a MSC balance", (done) ->
+    balance("1Po1oWkD2LmodfkBYiAktwh76vkF93LKnh").then (result) ->
+      msc = _.find(result, (item) -> item.asset == "MSC")
+      expect(msc).to.exist
+      expect(msc.quantity).to.be.eq "2074.71501469"
+      done()
+
+  it "has a MAID balance", (done) ->
+    balance("1madYsPmALf1TCo1qttumTH7Hbbro5uQD").then (result) ->
+      maid = _.find(result, (item) -> item.asset == "MAID")
+      expect(maid).to.exist
+      expect(maid.quantity).to.be.eq "47600.00000000"
+      done()
+
   it "handles failing requests to one service correctly", (done) ->
     balance("DDAa254Jf99rLzmGe4wA3Shr7MaYBHDd1b").then (result) ->
       expect(result).to.have.length(2)

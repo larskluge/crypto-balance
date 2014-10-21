@@ -1,0 +1,15 @@
+POST /v1/address/addr/
+host: www.omniwallet.org
+content-type: application/x-www-form-urlencoded; charset=utf-8
+accept: application/json
+body: addr=1Po1oWkD2LmodfkBYiAktwh76vkF93LKnh
+
+200 HTTP/1.1
+server: nginx/1.6.0
+date: Tue, 21 Oct 2014 02:02:35 GMT
+content-type: application/json
+transfer-encoding: chunked
+connection: keep-alive
+access-control-allow-origin: *
+
+{"balance": [{"divisible": true, "symbol": "SP27", "value": "23292724220001"}, {"divisible": true, "symbol": "MSC", "value": "207471501469"}, {"divisible": false, "symbol": "SP3", "value": "3291294"}, {"divisible": true, "symbol": "BTC", "value": 17759602}], "address": "1Po1oWkD2LmodfkBYiAktwh76vkF93LKnh"}

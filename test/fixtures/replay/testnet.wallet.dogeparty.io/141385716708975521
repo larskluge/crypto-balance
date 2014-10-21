@@ -1,0 +1,20 @@
+POST /_t_api
+host: testnet.wallet.dogeparty.io
+accept: application/json
+content-type: application/json
+body: {\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"get_normalized_balances\",\"params\":{\"addresses\":[\"1Po1oWkD2LmodfkBYiAktwh76vkF93LKnh\"]}}
+
+502 HTTP/1.1
+server: nginx
+date: Tue, 21 Oct 2014 02:06:10 GMT
+content-type: text/html
+content-length: 166
+connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>

@@ -14,16 +14,18 @@ msc = (addr) ->
       else
         status: "error", service: url, message: "Unknown", raw: resp
     .map (item) ->
-      if item.symbol == "BTC"
-        return
+      return if item.symbol == "BTC"
 
-      quantity = if item.divisible then item.value * 0.00000001 else item.value
+      quantity = parseInt(item.value, 10)
+      if item.divisible
+        quantity *= 0.00000001
+
       asset = "MSC/#{item.symbol}"
 
       status: "success"
       service: url
       address: addr
-      quantity: quantity
+      quantity: quantity.toFixed(8)
       asset: asset
     .filter (item) -> !!item
 

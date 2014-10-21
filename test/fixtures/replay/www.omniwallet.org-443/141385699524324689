@@ -1,0 +1,15 @@
+POST /v1/address/addr/
+host: www.omniwallet.org
+content-type: application/x-www-form-urlencoded; charset=utf-8
+accept: application/json
+body: addr=LNxtUEZ7Wmv8YsPaRV1f7pQBKXcKfVjUpe
+
+200 HTTP/1.1
+server: nginx/1.6.0
+date: Tue, 21 Oct 2014 01:59:42 GMT
+content-type: application/json
+transfer-encoding: chunked
+connection: keep-alive
+access-control-allow-origin: *
+
+{"balance": [{"divisible": true, "symbol": "BTC", "value": 0}], "address": "LNxtUEZ7Wmv8YsPaRV1f7pQBKXcKfVjUpe"}

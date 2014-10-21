@@ -4,8 +4,9 @@ normalizeAssetName = require('./asset-names').normalize
 
 
 balance = (addr, callback) ->
+
   Promise
-    .all [services.dogeparty(addr), services.chain_so(addr), services.counterparty(addr)]
+    .all(fn(addr) for s, fn of services)
     .reduce (a, b) ->
       a.concat b
     , []

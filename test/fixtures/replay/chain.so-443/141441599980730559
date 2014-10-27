@@ -1,0 +1,44 @@
+GET /api/v2/get_tx_unspent/BTC/13oV3V9xVfbjnvbaYQz1FhyEyFL8h4kNFA
+host: chain.so
+accept: application/json
+
+200 HTTP/1.1
+server: nginx
+date: Mon, 27 Oct 2014 13:19:59 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+status: 200 OK
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-ua-compatible: chrome=1
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: Fri, 01 Jan 1990 00:00:00 GMT
+access-control-allow-origin: *
+access-control-allow-methods: GET,POST
+access-control-allow-headers: Origin,Accept,Content-Type,X-Requested-With,X-CSRF-Token
+set-cookie: request_method=GET; path=/
+x-request-id: 35d103fb-9b6f-4bc9-8425-a72c90546f7a
+x-runtime: 0.018999
+strict-transport-security: max-age=31536000
+x-frame-options: SAMEORIGIN, SAMEORIGIN
+
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "address": "13oV3V9xVfbjnvbaYQz1FhyEyFL8h4kNFA",
+    "txs": [
+      {
+        "txid": "c3ed435ba8820d3458bcec53cd96ea3539e4a667dd7ca197cf5b2252457e6328",
+        "output_no": 1,
+        "script_asm": "OP_DUP OP_HASH160 1ebacb7844fdc322f805904fbf1962802db1537c OP_EQUALVERIFY OP_CHECKSIG",
+        "script_hex": "76a9141ebacb7844fdc322f805904fbf1962802db1537c88ac",
+        "value": "0.00010000",
+        "confirmations": 15137,
+        "time": 1406100081
+      }
+    ]
+  }
+}

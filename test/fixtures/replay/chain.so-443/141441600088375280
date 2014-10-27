@@ -1,0 +1,69 @@
+GET /api/v2/get_tx/BTC/c3ed435ba8820d3458bcec53cd96ea3539e4a667dd7ca197cf5b2252457e6328
+host: chain.so
+accept: application/json
+
+200 HTTP/1.1
+server: nginx
+date: Mon, 27 Oct 2014 13:20:00 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+status: 200 OK
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-ua-compatible: chrome=1
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: Fri, 01 Jan 1990 00:00:00 GMT
+access-control-allow-origin: *
+access-control-allow-methods: GET,POST
+access-control-allow-headers: Origin,Accept,Content-Type,X-Requested-With,X-CSRF-Token
+set-cookie: request_method=GET; path=/
+x-request-id: f9cb1b14-d5e6-4aa3-95f2-436155c60b36
+x-runtime: 0.008884
+strict-transport-security: max-age=31536000
+x-frame-options: SAMEORIGIN, SAMEORIGIN
+
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "txid": "c3ed435ba8820d3458bcec53cd96ea3539e4a667dd7ca197cf5b2252457e6328",
+    "blockhash": "00000000000000000050e95f6504c9cbab353c4c90cc294b458ec1dacb2a4854",
+    "confirmations": 15137,
+    "time": 1406100081,
+    "inputs": [
+      {
+        "input_no": 0,
+        "value": "5.00000000",
+        "address": "1AFNmdVZfQQfeLnmCmxcRHWWaMrGHaEUTp",
+        "type": "pubkeyhash",
+        "script": "3044022021dfcd1967eb9f6880d7242328aa09ea5aab9546d4ef5fb1d1bdf1e3587f9505022017adfaa900610585a834483c344638257bc9762b4d4d33175b9a2d59737f074201 0470dd512112bc8f8645343341eacb2baa72687701d39d39496495072a2504bdb83903330fbaff74512f38bd2a2d3acabcfb1d627cf6b647e8d248aae2160bde92",
+        "from_output": {
+          "txid": "2d2058df3d93aa3b284f67eec34739cc2a078b164e358c604f041f3075eaea2f",
+          "output_no": 0
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "output_no": 0,
+        "value": "4.99970000",
+        "address": "36PrZ1KHYMpqSyAQXSG8VwbUiq2EogxLo2",
+        "type": "scripthash",
+        "script": "OP_HASH160 3399bc19f2b20473d417e31472c92947b59f95f8 OP_EQUAL"
+      },
+      {
+        "output_no": 1,
+        "value": "0.00010000",
+        "address": "13oV3V9xVfbjnvbaYQz1FhyEyFL8h4kNFA",
+        "type": "pubkeyhash",
+        "script": "OP_DUP OP_HASH160 1ebacb7844fdc322f805904fbf1962802db1537c OP_EQUALVERIFY OP_CHECKSIG"
+      }
+    ],
+    "tx_hex": "01000000012feaea75301f044f608c354e168b072acc3947c3ee674f283baa933ddf58202d000000008a473044022021dfcd1967eb9f6880d7242328aa09ea5aab9546d4ef5fb1d1bdf1e3587f9505022017adfaa900610585a834483c344638257bc9762b4d4d33175b9a2d59737f074201410470dd512112bc8f8645343341eacb2baa72687701d39d39496495072a2504bdb83903330fbaff74512f38bd2a2d3acabcfb1d627cf6b647e8d248aae2160bde92ffffffff02d0efcc1d0000000017a9143399bc19f2b20473d417e31472c92947b59f95f88710270000000000001976a9141ebacb7844fdc322f805904fbf1962802db1537c88ac00000000",
+    "size": 255,
+    "version": 1,
+    "locktime": 0
+  }
+}

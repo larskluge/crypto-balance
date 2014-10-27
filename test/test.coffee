@@ -41,6 +41,13 @@ describe "Balance", ->
       expect(maid.quantity).to.be.eq "47600.00000000"
       done()
 
+  it "has a ETH balance", (done) ->
+    balance("1ebacb7844fdc322f805904fbf1962802db1537c").then (result) ->
+      eth = _.find(result, (item) -> item.asset == "ETH")
+      expect(eth).to.exist
+      expect(eth.quantity).to.be.eq "10000.00000000"
+      done()
+
   it "handles failing requests to one service correctly", (done) ->
     balance("DDAa254Jf99rLzmGe4wA3Shr7MaYBHDd1b").then (result) ->
       expect(result).to.have.length(2)

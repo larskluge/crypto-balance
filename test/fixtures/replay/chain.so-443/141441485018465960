@@ -1,0 +1,32 @@
+GET /api/v2/get_tx_unspent/BTC/13GkWpTY
+host: chain.so
+accept: application/json
+
+404 HTTP/1.1
+server: nginx
+date: Mon, 27 Oct 2014 13:00:50 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+status: 404 Not Found
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-ua-compatible: chrome=1
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: Fri, 01 Jan 1990 00:00:00 GMT
+access-control-allow-origin: *
+access-control-allow-methods: GET,POST
+access-control-allow-headers: Origin,Accept,Content-Type,X-Requested-With,X-CSRF-Token
+set-cookie: request_method=GET; path=/
+x-request-id: f0ccd3ac-bae9-4728-8104-cd856aceb32b
+x-runtime: 0.062436
+
+{
+  "status": "fail",
+  "data": {
+    "network": "Network is required (DOGE, DOGETEST, ...)",
+    "address": "Valid address or Short required",
+    "after_tx": "Get unspent transactions after this transaction ID."
+  }
+}

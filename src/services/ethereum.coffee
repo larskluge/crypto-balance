@@ -54,36 +54,40 @@ class ReqError extends Error
 
 
 ether = (addr) ->
-  btcaddr = base58checkEncode(addr, 0)
-
-  req.getAsync "https://chain.so/api/v2/get_tx_unspent/BTC/#{btcaddr}", json: true
-    .spread (resp, json) ->
-      if json.status == 'success'
-        json.data.txs
-      else
-        throw new ReqError(resp)
-    .map (utx) ->
-      req.getAsync "https://chain.so/api/v2/get_tx/BTC/#{utx.txid}", json: true
+  Promise
+    .try ->
+      btcaddr = base58checkEncode(addr, 0)
+    .then (btcaddr) ->
+      req.getAsync "https://chain.so/api/v2/get_tx_unspent/BTC/#{btcaddr}", json: true
         .spread (resp, json) ->
-          out = json.data.outputs[0]
-          if out.address is FUNDRAISING_ADDRESS
-            btc = parseFloat(out.value) + (30000 / SATOSHIS_PER_BTC)
-            eth = balanceByDate(btc, json.data.time)
+          if json.status == 'success'
+            json.data.txs
           else
-            throw "There was a problem fetching your ether balance. Please ensure you have entered the correct ether address"
-    .reduce (a, b) -> a + b
-    .then (eth) ->
-      status: "success"
-      service: "Ethereum"
-      address: addr
-      quantity: eth.toFixed(8)
-      asset: "ETH"
-    .catch ReqError, (e) ->
-      unless e.message == 'Invalid address'
-        status: 'error'
-        service: "Ethereum"
-        message: e.message
-        raw: e.resp
+            throw new ReqError(resp)
+        .map (utx) ->
+          req.getAsync "https://chain.so/api/v2/get_tx/BTC/#{utx.txid}", json: true
+            .spread (resp, json) ->
+              out = json.data.outputs[0]
+              if out.address is FUNDRAISING_ADDRESS
+                btc = parseFloat(out.value) + (30000 / SATOSHIS_PER_BTC)
+                eth = balanceByDate(btc, json.data.time)
+              else
+                throw "There was a problem fetching your ether balance. Please ensure you have entered the correct ether address"
+        .reduce (a, b) -> a + b
+        .then (eth) ->
+          status: "success"
+          service: "Ethereum"
+          address: addr
+          quantity: eth.toFixed(8)
+          asset: "ETH"
+        .catch ReqError, (e) ->
+          unless e.message == 'Invalid address'
+            status: 'error'
+            service: "Ethereum"
+            message: e.message
+            raw: e.resp
+    .catch TypeError, (e) ->
+      throw e unless e.message == "Invalid hex string"
 
 
 module.exports = ether

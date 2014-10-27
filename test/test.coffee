@@ -31,7 +31,7 @@ describe "Balance", ->
     balance("1Po1oWkD2LmodfkBYiAktwh76vkF93LKnh").then (result) ->
       msc = _.find(result, (item) -> item.asset == "MSC")
       expect(msc).to.exist
-      expect(msc.quantity).to.be.eq "2074.71501469"
+      expect(msc.quantity).to.be.eq "1738.58121469"
       done()
 
   it "has a MAID balance", (done) ->

@@ -3,4 +3,5 @@ module.exports =
   counterparty: require './counterparty'
   dogeparty: require './dogeparty'
   mastercoin: require './mastercoin'
+  ethereum: require './ethereum'
 

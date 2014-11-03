@@ -18,6 +18,8 @@ party = (addr, services) ->
     .map (attrs) ->
       [token, url] = attrs
       req.postAsync(params url, addr)
+        .timeout(10000)
+        .cancellable()
         .spread (resp, json) ->
           if resp.statusCode in [200..299] and !json.error
             for item in json.result
@@ -30,9 +32,10 @@ party = (addr, services) ->
             else
               message = "#{json.message}. Code: #{json.code}. #{json.data}"
             [status: 'error', service: url, message: message, raw: resp]
+        .catch Promise.TimeoutError, (e) ->
+          [status: 'error', service: url, message: e.message, raw: e]
     .reduce (item, merged) ->
       merged.concat item
-    , []
 
 
 exports.party = party

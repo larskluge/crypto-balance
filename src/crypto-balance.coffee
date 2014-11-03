@@ -7,6 +7,8 @@ balance = (addr, callback) ->
 
   Promise
     .all(fn(addr) for s, fn of services)
+    .timeout(20000)
+    .cancellable()
     .filter (item) -> !!item
     .reduce (a, b) -> a.concat b
     .filter (asset) ->

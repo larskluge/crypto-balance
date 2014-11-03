@@ -17,4 +17,6 @@ module.exports.run = ->
       for item in items
         if item.status == 'success'
           console.log "#{numeral(item.quantity).format("0,0.00000000")} #{item.asset}"
+        else
+          console.error item
 

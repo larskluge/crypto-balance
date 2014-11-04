@@ -9,14 +9,14 @@ module.exports.run = ->
     console.log "Usage: balance <address>"
     process.exit 1
 
-  balance addr, (error, items) ->
-    if error
-      console.error error
-      process.exit 1
-    else
+  balance addr
+    .then (items) ->
       for item in items
         if item.status == 'success'
           console.log "#{numeral(item.quantity).format("0,0.00000000")} #{item.asset}"
         else
           console.error item
+    .catch (error) ->
+      console.error error
+      process.exit 1
 

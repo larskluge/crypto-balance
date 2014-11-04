@@ -1,0 +1,14 @@
+GET /v1/assets/3BUQAssohZgE13keAeRTgy5jnGSHR1v119
+host: api.coinprism.com
+accept: application/json
+
+200 HTTP/1.1
+cache-control: no-cache
+pragma: no-cache
+content-type: application/json; charset=utf-8
+expires: -1
+server: Microsoft-IIS/8.5
+date: Tue, 04 Nov 2014 13:32:49 GMT
+content-length: 902
+
+{"asset_id":"ARZFtqEzUp1zirGCcCRCRDyu7M5GDEhAFC","asset_address":"3BUQAssohZgE13keAeRTgy5jnGSHR1v119","metadata_url":"https://cpr.sm/Zxaoc9s9AI","final_metadata_url":"https://cpr.sm/Zxaoc9s9AI","verified_issuer":false,"name":"cyber • Share","contract_url":"http://cyber.fund","name_short":"CFS","issuer":null,"description":"Creating global brains at <a href=\"http://cyber.fund\">cyber.fund</a>.\r\nRead <a href=\"http://bit.ly/cyberPaperC\">paper</a> for comprehensive understanding.\r\n<a href=\"https://www.coinprism.info/address/1BQmQ9Qh73yZ37R7pHrxvXoREPa4Am1Qqw\">Assets</a> owned by cyber•Fund","description_mime":"text/x-markdown; charset=UTF-8","type":"Stock","divisibility":0,"icon_url":"https://coinprism.blob.core.windows.net/profile/icon/3BUQAssohZgE13keAeRTgy5jnGSHR1v119.jpg","image_url":"https://coinprism.blob.core.windows.net/profile/image/3BUQAssohZgE13keAeRTgy5jnGSHR1v119.jpg"}

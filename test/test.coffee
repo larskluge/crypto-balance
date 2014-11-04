@@ -55,6 +55,20 @@ describe "Balance", ->
       expect(eth.quantity).to.be.eq "10000.00000000"
       done()
 
+  it "has some Open Assets balances", (done) ->
+    balance("1LUZHtvrHqaJ3jerhqQkQkcqrm9DzTaJop").then (result) ->
+      debugger
+      klippt = _.find(result, (item) -> item.asset == "OA/KLIPPT")
+      expect(klippt).to.exist
+      expect(klippt.quantity).to.be.eq "298599.00000000"
+      gold = _.find(result, (item) -> item.asset == "OA/Gold-Coins")
+      expect(gold).to.exist
+      expect(gold.quantity).to.be.eq "10000.00000000"
+      cfs = _.find(result, (item) -> item.asset == "OA/CFS")
+      expect(cfs).to.exist
+      expect(cfs.quantity).to.be.eq "1.00000000"
+      done()
+
   it "handles failing requests to one service correctly", (done) ->
     balance("DDAa254Jf99rLzmGe4wA3Shr7MaYBHDd1b").then (result) ->
       expect(result).to.have.length(2)

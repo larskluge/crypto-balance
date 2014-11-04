@@ -1,0 +1,31 @@
+GET /api/v2/get_address_balance/BTCTEST/1LUZHtvrHqaJ3jerhqQkQkcqrm9DzTaJop
+host: chain.so
+
+404 HTTP/1.1
+server: nginx
+date: Tue, 04 Nov 2014 13:32:47 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+status: 404 Not Found
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-ua-compatible: chrome=1
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: Fri, 01 Jan 1990 00:00:00 GMT
+access-control-allow-origin: *
+access-control-allow-methods: GET,POST
+access-control-allow-headers: Origin,Accept,Content-Type,X-Requested-With,X-CSRF-Token
+set-cookie: request_method=GET; path=/
+x-request-id: 74745f81-9a06-4d3a-b878-5b6de788e2e2
+x-runtime: 0.006333
+
+{
+  "status": "fail",
+  "data": {
+    "network": "Network is required (DOGE, DOGETEST, ...)",
+    "address": "A valid address is required",
+    "confirmations": "Minimum number of confirmations (optional)"
+  }
+}

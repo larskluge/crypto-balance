@@ -1,0 +1,18 @@
+POST /_t_api
+host: testnet.wallet.dogeparty.io
+accept: application/json
+content-type: application/json
+body: {\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"get_normalized_balances\",\"params\":{\"addresses\":[\"1LUZHtvrHqaJ3jerhqQkQkcqrm9DzTaJop\"]}}
+
+200 HTTP/1.1
+server: nginx
+date: Tue, 04 Nov 2014 13:33:20 GMT
+content-type: application/json
+content-length: 273
+connection: keep-alive
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+x-cw-backendhost: 0dab90d52b35
+
+{"jsonrpc": "2.0", "id": 0, "error": {"message": "Server error", "code": -32000, "data": {"message": "Got call_jsonrpc_api request error: [Errno 111] Connection refused", "args": ["Got call_jsonrpc_api request error: [Errno 111] Connection refused"], "type": "Exception"}}}

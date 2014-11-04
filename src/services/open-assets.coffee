@@ -33,7 +33,8 @@ oa = (addr) ->
       service: url
       address: addr
       quantity: quantity.toFixed(8)
-      asset: asset.symbol
+      asset: "OA/#{asset.symbol}"
+
     .catch Promise.TimeoutError, (e) ->
       [status: 'error', service: url, message: e.message, raw: e]
     .catch InvalidResponseError, (e) ->

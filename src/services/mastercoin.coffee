@@ -1,6 +1,7 @@
 Promise = require("bluebird")
 req = Promise.promisifyAll(require("request"))
 _ = require("lodash")
+InvalidResponseError = require("../errors").InvalidResponseError
 
 
 msc = (addr) ->
@@ -12,7 +13,7 @@ msc = (addr) ->
       if resp.statusCode in [200..299] and json.address == addr and _.isArray(json.balance)
         json.balance
       else
-        status: "error", service: url, message: "Unknown", raw: resp
+        throw new InvalidResponseError service: url, response: resp
     .map (item) ->
       return if item.symbol == "BTC"
 
@@ -28,6 +29,8 @@ msc = (addr) ->
       quantity: quantity.toFixed(8)
       asset: asset
     .filter (item) -> !!item
+    .catch InvalidResponseError, (e) ->
+      [status: "error", service: e.service, message: e.message, raw: e.response]
 
 
 module.exports = msc

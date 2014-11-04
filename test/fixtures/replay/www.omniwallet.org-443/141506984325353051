@@ -1,0 +1,20 @@
+POST /v1/address/addr/
+host: www.omniwallet.org
+content-type: application/x-www-form-urlencoded
+accept: application/json
+body: addr=1MaStErt4XsYHPwfrN9TpgdURLhHTdMenH
+
+502 HTTP/1.1
+server: nginx/1.6.0
+date: Tue, 04 Nov 2014 02:57:14 GMT
+content-type: text/html
+content-length: 172
+connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.6.0</center>
+</body>
+</html>

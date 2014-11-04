@@ -34,6 +34,14 @@ describe "Balance", ->
       expect(msc.quantity).to.be.eq "1738.58121469"
       done()
 
+  it "deals correctly with OmniWallet's API not being available", (done) ->
+    balance("1MaStErt4XsYHPwfrN9TpgdURLhHTdMenH").then (result) ->
+      console.log result
+      msc = _.find(result, (item) -> _.contains(item.service, "omniwallet"))
+      expect(msc).to.exist
+      expect(msc.status).to.be.eq "error"
+      done()
+
   it "has a MAID balance", (done) ->
     balance("1madYsPmALf1TCo1qttumTH7Hbbro5uQD").then (result) ->
       maid = _.find(result, (item) -> item.asset == "MAID")

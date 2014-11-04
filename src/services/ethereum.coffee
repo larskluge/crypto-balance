@@ -9,6 +9,7 @@ DECREASE_AFTER = 14
 Promise = require("bluebird")
 req = Promise.promisifyAll(require("request"))
 bs58check = require 'bs58check'
+ReqError = require("../errors").ReqError
 
 
 
@@ -41,16 +42,6 @@ balanceByDate = (value, date) ->
   price = ETHER_FOR_BTC - (delta.days - DECREASE_AFTER + 1) * DECREASE_AMOUNT_PER_DAY  if delta.days >= DECREASE_AFTER
   price = Math.max(price, MIN_ETH_FOR_BTC)
   total = value * price
-
-
-class ReqError extends Error
-  constructor: (resp) ->
-    @name = "ReqError"
-    if resp.body.data.address.search /valid address.*required/i >= 0
-      @message = "Invalid address"
-    else
-      @message = "Some API error occured"
-    @resp = resp
 
 
 ether = (addr) ->

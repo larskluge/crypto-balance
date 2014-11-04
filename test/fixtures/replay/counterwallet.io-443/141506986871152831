@@ -1,0 +1,18 @@
+POST /_t_api
+host: counterwallet.io
+accept: application/json
+content-type: application/json
+body: {\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"get_normalized_balances\",\"params\":{\"addresses\":[\"1MaStErt4XsYHPwfrN9TpgdURLhHTdMenH\"]}}
+
+200 HTTP/1.1
+server: openresty
+date: Tue, 04 Nov 2014 02:57:48 GMT
+content-type: application/json
+content-length: 41
+connection: keep-alive
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+x-cw-backendhost: cw01.counterwallet.co
+
+{"jsonrpc": "2.0", "result": [], "id": 0}

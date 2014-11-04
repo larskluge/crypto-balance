@@ -36,7 +36,6 @@ describe "Balance", ->
 
   it "deals correctly with OmniWallet's API not being available", (done) ->
     balance("1MaStErt4XsYHPwfrN9TpgdURLhHTdMenH").then (result) ->
-      console.log result
       msc = _.find(result, (item) -> _.contains(item.service, "omniwallet"))
       expect(msc).to.exist
       expect(msc.status).to.be.eq "error"

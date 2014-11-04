@@ -9,6 +9,8 @@ msc = (addr) ->
   opts = url: url, json: true, form: addr: addr
 
   req.postAsync(opts)
+    .timeout(10000)
+    .cancellable()
     .spread (resp, json) ->
       if resp.statusCode in [200..299] and json.address == addr and _.isArray(json.balance)
         json.balance
@@ -29,6 +31,8 @@ msc = (addr) ->
       quantity: quantity.toFixed(8)
       asset: asset
     .filter (item) -> !!item
+    .catch Promise.TimeoutError, (e) ->
+      [status: 'error', service: url, message: e.message, raw: e]
     .catch InvalidResponseError, (e) ->
       [status: "error", service: e.service, message: e.message, raw: e.response]
 

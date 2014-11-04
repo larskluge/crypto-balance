@@ -1,5 +1,4 @@
 Promise = require("bluebird")
-_ = require('underscore')
 req = Promise.promisifyAll(require("request"))
 
 params = (url, addr) ->

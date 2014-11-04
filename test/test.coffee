@@ -1,6 +1,6 @@
 require "./test_helper"
 balance = require "../src/crypto-balance"
-_ = require("underscore")
+_ = require("lodash")
 
 
 describe "Balance", ->

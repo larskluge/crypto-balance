@@ -1,6 +1,6 @@
 Promise = require("bluebird")
 req = Promise.promisifyAll(require("request"))
-_ = require("underscore")
+_ = require("lodash")
 
 
 chain_so = (addr) ->
@@ -11,7 +11,7 @@ chain_so = (addr) ->
       req.getAsync(url)
         .spread (resp, body) ->
           json = JSON.parse(body)
-          _(json.data).extend service: url
+          _.merge json.data, service: url
           json
     .map (res) ->
       data = res.data

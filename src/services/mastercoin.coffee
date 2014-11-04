@@ -1,6 +1,6 @@
 Promise = require("bluebird")
 req = Promise.promisifyAll(require("request"))
-_ = require("underscore")
+_ = require("lodash")
 
 
 msc = (addr) ->

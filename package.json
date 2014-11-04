@@ -33,9 +33,9 @@
   "dependencies": {
     "bluebird": "^2.3.0",
     "bs58check": "^1.0.3",
+    "lodash": "^2.4.1",
     "numeral": "^1.5.3",
-    "request": "^2.40.0",
-    "underscore": "^1.6.0"
+    "request": "^2.40.0"
   },
   "devDependencies": {
     "coffee-script": "^1.7.1",

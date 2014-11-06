@@ -1,0 +1,14 @@
+GET /v1/addresses/1Po1oWkD2LmodfkBYiAktwh76vkF93LKnh
+host: api.coinprism.com
+accept: application/json
+
+200 HTTP/1.1
+cache-control: no-cache
+pragma: no-cache
+content-type: application/json; charset=utf-8
+expires: -1
+server: Microsoft-IIS/8.5
+date: Thu, 06 Nov 2014 12:47:27 GMT
+content-length: 103
+
+{"address":"1Po1oWkD2LmodfkBYiAktwh76vkF93LKnh","balance":17563072,"unconfirmed_balance":0,"assets":[]}

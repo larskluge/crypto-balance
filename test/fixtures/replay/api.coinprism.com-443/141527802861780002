@@ -1,0 +1,14 @@
+GET /v1/addresses/LNxtUEZ7Wmv8YsPaRV1f7pQBKXcKfVjUpe
+host: api.coinprism.com
+accept: application/json
+
+400 HTTP/1.1
+cache-control: no-cache
+pragma: no-cache
+content-type: application/json; charset=utf-8
+expires: -1
+server: Microsoft-IIS/8.5
+date: Thu, 06 Nov 2014 12:47:08 GMT
+content-length: 48
+
+{"Message":"Error","ErrorCode":"InvalidAddress"}

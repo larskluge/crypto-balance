@@ -8,7 +8,7 @@ pragma: no-cache
 content-type: application/json; charset=utf-8
 expires: -1
 server: Microsoft-IIS/8.5
-date: Tue, 04 Nov 2014 13:32:48 GMT
+date: Thu, 06 Nov 2014 12:47:34 GMT
 content-length: 503
 
 {"address":"1LUZHtvrHqaJ3jerhqQkQkcqrm9DzTaJop","balance":1903800,"unconfirmed_balance":0,"assets":[{"address":"3QzJDrSsi4Pm2DhcZFXR9MGJsXXtsYhUsq","id":"Af59wop4VJjXk2DAzoX9scAUCcAsghPHFX","balance":"10000","unconfirmed_balance":"0"},{"address":"3BUQAssohZgE13keAeRTgy5jnGSHR1v119","id":"ARZFtqEzUp1zirGCcCRCRDyu7M5GDEhAFC","balance":"1","unconfirmed_balance":"0"},{"address":"3NEBLgWPRayiRFm6RWtKgzXidS4sK3coR5","id":"AcK34dsaCqKV94Ges4t4RFRsxWhrAwZoX8","balance":"298599","unconfirmed_balance":"0"}]}

@@ -14,7 +14,10 @@ oa = (addr) ->
       if resp.statusCode in [200..299] and json.address == addr and _.isArray(json.assets)
         json.assets
       else
-        throw new InvalidResponseError service: url, response: resp
+        if _.isObject(json) and json.Message == "Error" and json.ErrorCode == "InvalidAddress"
+          []
+        else
+          throw new InvalidResponseError service: url, response: resp
     .map (asset) ->
       assetUrl = "https://api.coinprism.com/v1/assets/#{asset.address}"
       req(assetUrl, json: true)

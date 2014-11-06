@@ -61,7 +61,7 @@ describe "Balance", ->
       klippt = _.find(result, (item) -> item.asset == "OA/KLIPPT")
       expect(klippt).to.exist
       expect(klippt.quantity).to.be.eq "298599.00000000"
-      gold = _.find(result, (item) -> item.asset == "OA/Gold-Coins")
+      gold = _.find(result, (item) -> item.asset == "OA/GOLD-COINS")
       expect(gold).to.exist
       expect(gold.quantity).to.be.eq "10000.00000000"
       cfs = _.find(result, (item) -> item.asset == "OA/CFS")

@@ -19,12 +19,13 @@ oa = (addr) ->
         else
           throw new InvalidResponseError service: url, response: resp
     .map (asset) ->
-      assetUrl = "https://api.coinprism.com/v1/assets/#{asset.address}"
+      debugger
+      assetUrl = "https://api.coinprism.com/v1/assets/#{asset.id}"
       req(assetUrl, json: true)
         .timeout(10000)
         .cancellable()
         .spread (resp, json) ->
-          if resp.statusCode in [200..299] and json.asset_address == asset.address
+          if resp.statusCode in [200..299] and json.asset_id == asset.id
             _.merge asset, symbol: json.name_short, divisibility: json.divisibility
           else
             throw new InvalidResponseError service: url, response: resp

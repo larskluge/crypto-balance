@@ -57,7 +57,6 @@ describe "Balance", ->
 
   it "has some Open Assets balances", (done) ->
     balance("1LUZHtvrHqaJ3jerhqQkQkcqrm9DzTaJop").then (result) ->
-      debugger
       klippt = _.find(result, (item) -> item.asset == "OA/KLIPPT")
       expect(klippt).to.exist
       expect(klippt.quantity).to.be.eq "298599.00000000"

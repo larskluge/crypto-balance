@@ -1,0 +1,14 @@
+GET /v1/assets/ARZFtqEzUp1zirGCcCRCRDyu7M5GDEhAFC
+host: api.coinprism.com
+accept: application/json
+
+200 HTTP/1.1
+cache-control: no-cache
+pragma: no-cache
+content-type: application/json; charset=utf-8
+expires: -1
+server: Microsoft-IIS/8.5
+date: Sat, 06 Dec 2014 09:36:39 GMT
+content-length: 783
+
+{"asset_id":"ARZFtqEzUp1zirGCcCRCRDyu7M5GDEhAFC","metadata_url":"https://cpr.sm/Zxaoc9s9AI","final_metadata_url":"https://cpr.sm/Zxaoc9s9AI","verified_issuer":false,"name":"cyber • Shares","contract_url":"http://cyber.fund","name_short":"CFS","issuer":null,"description":"Building industry of polymorphic decentralized applications. Visit <a href=\"http://cybershares.net\">cyber • Shares</a> official site. Read <a href=\"https://github.com/cyberFund/cyberShares/wiki\">paper</a>.","description_mime":"text/x-markdown; charset=UTF-8","type":"Stock","divisibility":6,"icon_url":"https://coinprism.blob.core.windows.net/profile/icon/ARZFtqEzUp1zirGCcCRCRDyu7M5GDEhAFC.jpg","image_url":"https://coinprism.blob.core.windows.net/profile/image/ARZFtqEzUp1zirGCcCRCRDyu7M5GDEhAFC.jpg"}

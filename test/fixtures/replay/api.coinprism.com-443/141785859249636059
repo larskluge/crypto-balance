@@ -1,0 +1,14 @@
+GET /v1/addresses/1MaStErt4XsYHPwfrN9TpgdURLhHTdMenH
+host: api.coinprism.com
+accept: application/json
+
+200 HTTP/1.1
+cache-control: no-cache
+pragma: no-cache
+content-type: application/json; charset=utf-8
+expires: -1
+server: Microsoft-IIS/8.5
+date: Sat, 06 Dec 2014 09:36:33 GMT
+content-length: 266
+
+{"address":"1MaStErt4XsYHPwfrN9TpgdURLhHTdMenH","asset_address":"akXYL8QgDY1mE9e72tzFeUYY3kwsTPXdbez","bitcoin_address":"1MaStErt4XsYHPwfrN9TpgdURLhHTdMenH","issuable_asset":"AVV7dpQGPr8LQnSKRe8Jwf7pWu4WfKd3nL","balance":23748911,"unconfirmed_balance":0,"assets":[]}

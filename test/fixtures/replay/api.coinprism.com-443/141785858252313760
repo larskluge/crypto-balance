@@ -1,4 +1,4 @@
-GET /v1/addresses/DP15mU18LLcLMpULSpFm5R77FYjsjjRCPu
+GET /v1/addresses/DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr
 host: api.coinprism.com
 accept: application/json
 
@@ -8,7 +8,7 @@ pragma: no-cache
 content-type: application/json; charset=utf-8
 expires: -1
 server: Microsoft-IIS/8.5
-date: Thu, 06 Nov 2014 12:47:14 GMT
+date: Sat, 06 Dec 2014 09:36:23 GMT
 content-length: 48
 
 {"Message":"Error","ErrorCode":"InvalidAddress"}

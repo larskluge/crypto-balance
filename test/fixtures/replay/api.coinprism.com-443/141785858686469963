@@ -1,0 +1,14 @@
+GET /v1/addresses/15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd
+host: api.coinprism.com
+accept: application/json
+
+200 HTTP/1.1
+cache-control: no-cache
+pragma: no-cache
+content-type: application/json; charset=utf-8
+expires: -1
+server: Microsoft-IIS/8.5
+date: Sat, 06 Dec 2014 09:36:27 GMT
+content-length: 267
+
+{"address":"15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd","asset_address":"akFPkMi9orYGKRVCUcgNRXa7XaYxLEjQjjx","bitcoin_address":"15Rs7YLUP4NdZF37a4GEsiCxEwnAKHWeUd","issuable_asset":"AaCSr9YhN3oLSZNeaapsdfTKsDMRih3emJ","balance":149592149,"unconfirmed_balance":0,"assets":[]}

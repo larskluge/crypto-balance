@@ -68,6 +68,13 @@ describe "Balance", ->
       expect(cfs.quantity).to.be.eq "1.00000000"
       done()
 
+  it "handles unknown OA asset difinitions gracefully", (done) ->
+    balance("1KhrhXz8fXorDrLn8XMopx422eUnGiphgg").then (result) ->
+      unknown = _.find(result, (item) -> item.asset == "OA/AdKhXXbFrk7WFNSwWSZhVX9vYJPk99bFYU")
+      expect(unknown).to.exist
+      expect(unknown.quantity).to.be.eq "10000000.00000000"
+      done()
+
   it "handles failing requests to one service correctly", (done) ->
     balance("DDAa254Jf99rLzmGe4wA3Shr7MaYBHDd1b").then (result) ->
       expect(result).to.have.length(2)

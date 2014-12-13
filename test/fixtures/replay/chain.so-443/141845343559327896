@@ -1,0 +1,36 @@
+GET /api/v2/get_address_balance/BTC/1KhrhXz8fXorDrLn8XMopx422eUnGiphgg
+host: chain.so
+
+200 HTTP/1.1
+server: nginx
+date: Sat, 13 Dec 2014 06:50:34 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+status: 200 OK
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-ua-compatible: chrome=1
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: Fri, 01 Jan 1990 00:00:00 GMT
+access-control-allow-methods: GET,POST
+access-control-allow-headers: Origin,Accept,Content-Type,X-Requested-With,X-CSRF-Token
+access-control-allow-origin: *
+set-cookie: _mkra_ctxt=5fb83b50bfed3fd7318ad7966c25671c--200; path=/; max-age=5
+set-cookie: request_method=GET; path=/
+x-request-id: 7e6a5636-42f3-488f-946c-e9034fd66d32
+x-runtime: 0.067289
+strict-transport-security: max-age=31536000;includeSubDomains
+x-frame-options: SAMEORIGIN
+x-download-options: noopen
+
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "address": "1KhrhXz8fXorDrLn8XMopx422eUnGiphgg",
+    "confirmed_balance": "0.00029808",
+    "unconfirmed_balance": "0.00000000"
+  }
+}

@@ -19,14 +19,18 @@ oa = (addr) ->
         else
           throw new InvalidResponseError service: url, response: resp
     .map (asset) ->
-      debugger
+      console.log asset.id
       assetUrl = "https://api.coinprism.com/v1/assets/#{asset.id}"
       req(assetUrl, json: true)
         .timeout(10000)
         .cancellable()
         .spread (resp, json) ->
-          if resp.statusCode in [200..299] and json.asset_id == asset.id
-            _.merge asset, symbol: json.name_short, divisibility: json.divisibility
+          if resp.statusCode in [200..299]
+            if _.isNull json
+              # fail gracefully when asset definition is unknown
+              _.merge asset, symbol: "OA/#{asset.id}", divisibility: 0
+            else if json.asset_id == asset.id
+              _.merge asset, symbol: "OA/#{json.name_short.toUpperCase()}", divisibility: json.divisibility
           else
             throw new InvalidResponseError service: url, response: resp
     .map (asset) ->
@@ -37,7 +41,7 @@ oa = (addr) ->
       service: url
       address: addr
       quantity: quantity.toFixed(8)
-      asset: "OA/#{asset.symbol.toUpperCase()}"
+      asset: asset.symbol
 
     .catch Promise.TimeoutError, (e) ->
       [status: 'error', service: url, message: e.message, raw: e]

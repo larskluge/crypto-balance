@@ -17,6 +17,7 @@ module.exports.run = ->
           console.log "#{numeral(item.quantity).format("0,0.00000000")} #{item.asset}"
         else
           console.error _.merge(item, raw: "[object]")
+      process.exit 0
     .catch (error) ->
       console.error error
       process.exit 1

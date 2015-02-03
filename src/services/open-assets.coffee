@@ -19,7 +19,6 @@ oa = (addr) ->
         else
           throw new InvalidResponseError service: url, response: resp
     .map (asset) ->
-      console.log asset.id
       assetUrl = "https://api.coinprism.com/v1/assets/#{asset.id}"
       req(assetUrl, json: true)
         .timeout(10000)

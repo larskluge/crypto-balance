@@ -12,6 +12,11 @@ Warning: this is a very early version--use at your own risk. Pull requests are v
 - Dogecoin
 - All tokens created on Counterparty
 - All tokens created on Dogeparty
+- Mastercoin
+- Ethereum (pre-sale)
+- Open Assets
+
+.. and maybe more by now, in case we forget to update this section again, check the code [src/services](https://github.com/larskluge/crypto-balance/tree/master/src/services).
 
 
 ## Installation

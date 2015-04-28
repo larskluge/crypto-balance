@@ -12,7 +12,7 @@ msc = (addr) ->
     .timeout(10000)
     .cancellable()
     .spread (resp, json) ->
-      if resp.statusCode in [200..299] and json.address == addr and _.isArray(json.balance)
+      if resp.statusCode in [200..299] and _.isArray(json.balance)
         json.balance
       else
         throw new InvalidResponseError service: url, response: resp

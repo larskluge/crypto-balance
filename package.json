@@ -17,7 +17,7 @@
     "dogeparty",
     "xdp"
   ],
-  "version": "0.0.20",
+  "version": "0.0.21",
   "author": "Lars Kluge <l@larskluge.com>",
   "main": "lib/crypto-balance.js",
   "bin": {
@@ -33,7 +33,7 @@
   "dependencies": {
     "bluebird": "^2.3.0",
     "bs58check": "^1.0.3",
-    "lodash": "^2.4.1",
+    "lodash": ">=4.17.11",
     "numeral": "^1.5.3",
     "request": "^2.40.0"
   },
